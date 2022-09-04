@@ -1,8 +1,8 @@
 const fs = require("fs");
 const fsPromises = require("fs").promises;
-const data = fs.readFileSync("./data/usuarios.json");
+const data = fs.readFileSync("./express/data/usuarios.json");
 const Users = JSON.parse(data);
-const readConfig = fs.readFileSync("./data/config.json");
+const readConfig = fs.readFileSync("./express/data/config.json");
 const config = JSON.parse(readConfig);
 const control = {};
 
