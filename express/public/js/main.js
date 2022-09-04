@@ -27,8 +27,9 @@ closeAlert.addEventListener('click',()=>{
     modalAlert.classList.remove('show')
     clearTimeout(Alerta)
 })
+let url_atual = window.location.href
 function Listar() {
-    fetch("http://localhost:8000/usuarios", {
+    fetch(`${url_atual}usuarios`, {
         method: "GET",
         headers: { "Content-type": "application/json" },
     }).then(res=>res.json())
@@ -69,7 +70,7 @@ btn_post.addEventListener("click", async() => {
             nome: elNome.value,
             email: elEmail.value,
         };
-        await fetch("http://localhost:8000/usuarios", {
+        await fetch(`${url_atual}usuarios`, {
             method: "POST",
             body: JSON.stringify(_data),
             headers: { "Content-type": "application/json; charset=UTF-8" },
@@ -85,7 +86,7 @@ btn_post.addEventListener("click", async() => {
 });
 
 async function Deletar(num) {
-    await fetch(`http://localhost:8000/usuarios/${num}`, {
+    await fetch(`${url_atual}usuarios/${num}`, {
         method: "DELETE",
         headers: { "Content-type": "application/json; charset=UTF-8" },
     })
@@ -96,7 +97,7 @@ async function Deletar(num) {
         .catch((err) => console.log(err));
 }
 async function Editar(num) {
-    await fetch(`http://localhost:8000/usuarios/${num}`, {
+    await fetch(`${url_atual}usuarios/${num}`, {
         method: "GET",
         headers: { "Content-type": "application/json; charset=UTF-8" },
     })
@@ -115,7 +116,7 @@ btn_put.addEventListener("click", async () => {
         email: modEmail.value,
     };
 
-    await fetch(`http://localhost:8000/usuarios/${modId.value}`, {
+    await fetch(`${url_atual}usuarios/${modId.value}`, {
         method: "PUT",
         body: JSON.stringify(_data),
         headers: { "Content-type": "application/json; charset=UTF-8" },
