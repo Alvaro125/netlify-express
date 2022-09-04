@@ -1,0 +1,189 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+body {
+    margin: 0;
+    padding: 0;
+}
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #14bc39;
+    height: 6.25rem;
+    color: #ffffff;
+}
+header p {
+    font-family: "Roboto", sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 38px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+.text {
+    margin: 0 0 0 3.125rem;
+    padding: 0;
+}
+.text h2 {
+    font-family: "Roboto";
+    font-size: 1.625rem;
+    font-weight: 500;
+}
+.line {
+    background: #14bc39;
+    height: 1px;
+    margin: 0 2rem;
+}
+.form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 1rem 1.5rem;
+}
+.form input {
+    border: #14bc39 1px solid;
+    height: 3.125rem;
+    width: 36%;
+    font-family: "Roboto", sans-serif;
+    font-size: 1.375rem;
+    font-weight: 400;
+    text-align: left;
+    border-radius: 5px;
+    padding-left: 1.5rem;
+}
+.form button {
+    background: #14bc39;
+    color: #ffffff;
+    font-family: "Roboto", sans-serif;
+    font-size: 1.375rem;
+    width: 16%;
+    font-weight: 400;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+}
+
+table{
+    border-spacing: 1px;
+}
+tr{
+    height: 3.125rem;
+}
+tr button{
+    height: 100%;
+    width: auto;
+    background: transparent;
+    border: none;
+    font-size: 24px;
+}
+#lista table {
+    position: relative;
+    width: 100%;
+    padding: 0 2rem;
+    margin: 1rem 0;
+}
+#lista table thead {
+    position: relative;
+    width: 100%;
+    background: #14bc39;
+    color: #ffffff;
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+}
+#lista table tbody {
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: center;
+}
+#lista table tbody .cor1 {
+    background: #bde3c6;
+}
+#lista table tbody .cor2 {
+    background: #f8f8f8;
+}
+#modal{
+    display: none;
+}
+#modal.show{
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.479);
+}
+#modal .form{
+    padding: 1rem 2rem;
+    background: #bde3c6;
+    flex-direction: column;
+    align-items: center;
+}
+#modal .form input{
+    width: 90%;
+}
+#modal .form button{
+    width: 60%;
+}
+.close{
+    display: flex;
+    top: 1rem;
+    right: 1rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    align-items: center;
+    font-size: 2rem;
+    color: #ffffff;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgb(209, 35, 22);
+    position: absolute;
+}
+.alert{
+    display: none;
+    width: 0;
+    flex-direction: row-reverse;
+    align-items: center;
+    font-family: "Roboto", sans-serif;
+    position: fixed;
+    background: orange;
+    top: -5rem;
+    left: 0;
+    right: 1rem;
+    padding: 1rem;
+    border-radius: 10px;
+    transition: all 1s;
+}
+.alert.show{
+    display: flex;
+    width: auto;
+    flex-direction: row-reverse;
+    align-items: center;
+    font-family: "Roboto", sans-serif;
+    position: fixed;
+    background: orange;
+    top: 1rem;
+    left: 1rem;
+    right: 1rem;
+    padding: 1rem;
+    border-radius: 10px;
+    color: #ffffff;
+    transition: all 1s;
+}
+.alert .close{
+    position: relative;
+    margin:0 0 auto auto;
+    width: 1.5rem;
+    height: 1.5rem;
+    align-items: center;
+    font-size: 1rem;
+    color: #ffffff;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgb(209, 35, 22);
+}
